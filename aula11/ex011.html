@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro?</title>
+</head>
+
+<body>
+    <h1>Brasileiro ou Estrangeiro</h1>
+    Em qual país você nasceu: <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="país()">
+    <div id="res"></div>
+
+    <script>
+        function país() {
+            var país = document.querySelector('input#txtp').value
+            var res = document.querySelector('div#res')
+            res.innerHTML = `<p>Vivendo em <strong>${país}</strong><p>`
+            if (país.toLowerCase() != 'brasil') {
+                res.innerHTML += `<p>Você é <strong>estrangeiro!</strong></p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>brasileiro!</strong></p>`
+            }
+        }
+    </script>
+</body>
+
+</html>
